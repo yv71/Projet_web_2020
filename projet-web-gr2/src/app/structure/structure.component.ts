@@ -24,7 +24,7 @@ export class StructureComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getStatut() : boolean
+  getStatut() : string
   {
     return this.statut;
   }
