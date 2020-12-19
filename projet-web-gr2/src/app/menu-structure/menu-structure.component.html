@@ -1,1 +1,14 @@
-<p>menu-structure works!</p>
+<div class="menu">
+  <div class="infosGenerales">
+    <!--<h4 *ngIf="structure.type === Cellule">Cellule</h4>
+    <h4 *ngIf="structure.type === Tremie">Trémie</h4>
+    <h4 *ngIf="structure.type === Boisseau">Boisseau</h4>-->
+    <h4> n° <!--{{structure.id}}--></h4>
+    <!--<p *ngIf="structure.plein">Lot contenu : Lot n° {{structure.lot.id}} - {{structure.lot.typeGrains}}</p><br>-->
+    <!--<p *ngIf="!structure.plein">Pas de lot contenu</p><br>-->
+    <p> Volume : <!--{{structure.volume}}--> m3</p>
+  </div>
+  <div class="btnsActions">
+    <button type="button" name="button">Envoyer Contenu</button>
+  </div>
+</div>

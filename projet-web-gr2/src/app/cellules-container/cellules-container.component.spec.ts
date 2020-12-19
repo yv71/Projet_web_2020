@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SiloComponent } from './silo.component';
+import { CellulesContainerComponent } from './cellules-container.component';
 
-describe('SiloComponent', () => {
-  let component: SiloComponent;
-  let fixture: ComponentFixture<SiloComponent>;
+describe('CellulesContainerComponent', () => {
+  let component: CellulesContainerComponent;
+  let fixture: ComponentFixture<CellulesContainerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SiloComponent ]
+      declarations: [ CellulesContainerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SiloComponent);
+    fixture = TestBed.createComponent(CellulesContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

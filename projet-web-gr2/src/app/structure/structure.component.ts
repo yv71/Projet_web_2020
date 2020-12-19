@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Structure } from '../shared/models/structure.model';
 
 @Component({
   selector: 'app-structure',
@@ -7,9 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StructureComponent implements OnInit {
 
-  constructor() { }
+  private isBig : boolean;
+  private statut : string;
+  private structure : Structure;
+
+  constructor() {
+    this.isBig = true;
+    this.structure = new Structure(12, 725);
+    if(this.structure.getPleine())
+    {
+      this.statut = "pleine";
+    }
+  }
 
   ngOnInit(): void {
   }
+
+  getStatut() : boolean
+  {
+    return this.statut;
+  }
+
+  getIsBig(): boolean
+  {
+    return this.isBig;
+  }
+
+  getStructure() : Structure
+  {
+    return this.structure;
+  }
+
 
 }
