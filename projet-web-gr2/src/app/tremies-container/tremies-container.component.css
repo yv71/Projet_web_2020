@@ -1,0 +1,16 @@
+.tremieContainer{
+  width:15vw;
+}
+
+.tremie{
+  height: 80px;
+  width:100%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+h3
+{
+  justify-content: center;
+  display: flex;
+}

@@ -1,4 +1,16 @@
 .celluleContainer{
   width:10vw;
-  height:50vh;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.celluleSilo{
+  height: 50px;
+  width:100%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+h3{
+  text-align: center;
 }

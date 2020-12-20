@@ -8,6 +8,10 @@ import { MenuStructureComponent } from './menu-structure/menu-structure.componen
 import { TailleCelluleDirective } from './shared/directives/taille-cellule.directive';
 import { EtatStructureDirective } from './shared/directives/etat-structure.directive';
 import { CellulesContainerComponent } from './cellules-container/cellules-container.component';
+import { TremiesContainerComponent } from './tremies-container/tremies-container.component';
+
+import { SelectStructureService } from './shared/services/select-structure.service';
+import { BoisseauxContainerComponent } from './boisseaux-container/boisseaux-container.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,15 @@ import { CellulesContainerComponent } from './cellules-container/cellules-contai
     MenuStructureComponent,
     TailleCelluleDirective,
     EtatStructureDirective,
-    CellulesContainerComponent
+    CellulesContainerComponent,
+    TremiesContainerComponent,
+    BoisseauxContainerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SelectStructureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

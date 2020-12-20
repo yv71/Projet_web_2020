@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Structure } from '../shared/models/structure.model';
 
 @Component({
@@ -12,9 +12,9 @@ export class StructureComponent implements OnInit {
   private statut : string;
   private structure : Structure;
 
-  constructor() {
-    this.isBig = true;
-    this.structure = new Structure(12, 725);
+  constructor(struct : Structure, @Inject(Boolean) big) {
+    this.isBig = big;
+    this.structure = struct;
     if(this.structure.getPleine())
     {
       this.statut = "pleine";

@@ -1,0 +1,6 @@
+<div class="tremieContainer">
+<div class="tremie"  *ngFor="let tremie of tremies; let index = index" (click)='selectTremie(tremie.getStructure().getId())' [appEtatStructure]="tremie.getStatut()">
+
+</div>
+<h3>Trémies</h3>
+</div>

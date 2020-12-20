@@ -1,0 +1,6 @@
+<div class="boisseauContainer">
+<div class="boisseau"  *ngFor="let boisseau of boisseaux; let index = index" (click)='selectBoisseau(boisseau.getStructure().getId())' [appEtatStructure]="boisseau.getStatut()">
+
+</div>
+<h3>Boisseaux d'expédition</h3>
+</div>

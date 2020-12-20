@@ -1,3 +1,6 @@
 <div class="celluleContainer">
+<div class="celluleSilo"  *ngFor="let cellule of cellules; let index = index" [appTailleCellule]="cellule.getIsBig()" (click)='selectCellule(cellule.getStructure().getId())' [appEtatStructure]="cellule.getStatut()">
 
+</div>
+<h3>Cellules du silo</h3>
 </div>

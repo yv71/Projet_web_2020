@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Structure } from '../shared/models/structure.model';
+import {SelectStructureService } from '../shared/services/select-structure.service';
 
 @Component({
   selector: 'app-menu-structure',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuStructureComponent implements OnInit {
 
-  constructor() { }
+  private structure : Structure;
+
+  constructor(private selectStructureService : SelectStructureService) { }
 
   ngOnInit(): void {
+    this.selectStructureService.getStructure().subscribe((struct : Structure) =>
+    {
+      this.structure = struct;
+    });
+    }
+
+  getStructure() : Structure
+  {
+    return this.structure;
   }
 
 }
