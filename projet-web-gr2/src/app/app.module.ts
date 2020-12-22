@@ -12,6 +12,8 @@ import { TremiesContainerComponent } from './tremies-container/tremies-container
 
 import { SelectStructureService } from './shared/services/select-structure.service';
 import { BoisseauxContainerComponent } from './boisseaux-container/boisseaux-container.component';
+import { CamionsContainerComponent } from './camions-container/camions-container.component';
+import { CommandesContainerComponent } from './commandes-container/commandes-container.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { BoisseauxContainerComponent } from './boisseaux-container/boisseaux-con
     EtatStructureDirective,
     CellulesContainerComponent,
     TremiesContainerComponent,
-    BoisseauxContainerComponent
+    BoisseauxContainerComponent,
+    CamionsContainerComponent,
+    CommandesContainerComponent
   ],
   imports: [
     BrowserModule,

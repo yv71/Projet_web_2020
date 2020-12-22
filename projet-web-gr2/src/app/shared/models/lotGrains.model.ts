@@ -17,7 +17,7 @@ export class LotGrains
 
   getId() : number
   {
-    return this.poids;
+    return this.id;
   }
 
   getPoids() : number

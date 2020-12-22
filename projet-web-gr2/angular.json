@@ -118,6 +118,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "projet-web-gr2"
+    }
+  },
+  "defaultProject": "projet-web-gr2",
+  "cli": {
+    "analytics": "85fc66a4-fdd0-4c9b-a0af-3e798e0863c7"
+  }
 }
