@@ -5,8 +5,11 @@
     "\\projet-web-gr2\\e2e",
     "\\projet-web-gr2\\src",
     "\\projet-web-gr2\\src\\app",
-    "\\projet-web-gr2\\src\\app\\header"
+    "\\projet-web-gr2\\src\\app\\boisseaux-container",
+    "\\projet-web-gr2\\src\\app\\camions-container",
+    "\\projet-web-gr2\\src\\app\\cellules-container",
+    "\\projet-web-gr2\\src\\app\\tremies-container"
   ],
-  "SelectedNode": "\\projet-web-gr2\\src\\app\\header\\header.component.ts",
+  "SelectedNode": "\\projet-web-gr2\\karma.conf.js",
   "PreviewInSolutionExplorer": false
 }
