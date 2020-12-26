@@ -35,10 +35,14 @@ export class BoisseauxContainerComponent implements OnInit {
          this.boisseaux.push(new StructureComponent(boisseau,false));
        }
      }
+
+
    }
 
    selectBoisseau(id : number):void
    {
      this.selectStructureService.selectStructure(id-1);
    }
+
+
 }

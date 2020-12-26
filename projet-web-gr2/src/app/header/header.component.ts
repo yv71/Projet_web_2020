@@ -10,7 +10,6 @@ export class HeaderComponent implements OnInit {
   private jour : number = 1;
   private hour : number = 8;
   private min : number = 0;
-  private action : boolean;
 
   constructor() {
     this.startTimer();
@@ -64,10 +63,9 @@ export class HeaderComponent implements OnInit {
             this.hour = 0;
           }
           let doc = document.getElementById("timer");
-          console.log(this.min);
           doc.innerHTML = this.getString(this.min,this.hour,this.jour);
 
-    },10);
+    },1000);
   }
 
 
