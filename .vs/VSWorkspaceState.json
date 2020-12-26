@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\projet-web-gr2"
+    "\\projet-web-gr2",
+    "\\projet-web-gr2\\e2e",
+    "\\projet-web-gr2\\src",
+    "\\projet-web-gr2\\src\\app",
+    "\\projet-web-gr2\\src\\app\\header"
   ],
-  "SelectedNode": "\\projet-web-gr2\\src",
+  "SelectedNode": "\\projet-web-gr2\\src\\app\\header\\header.component.ts",
   "PreviewInSolutionExplorer": false
 }
