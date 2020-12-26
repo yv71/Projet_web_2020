@@ -14,6 +14,7 @@ import { SelectStructureService } from './shared/services/select-structure.servi
 import { BoisseauxContainerComponent } from './boisseaux-container/boisseaux-container.component';
 import { CamionsContainerComponent } from './camions-container/camions-container.component';
 import { CommandesContainerComponent } from './commandes-container/commandes-container.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CommandesContainerComponent } from './commandes-container/commandes-con
     TremiesContainerComponent,
     BoisseauxContainerComponent,
     CamionsContainerComponent,
-    CommandesContainerComponent
+    CommandesContainerComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
