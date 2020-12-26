@@ -1,8 +1,8 @@
 export enum EnumTypeGrains
 {
-  ble = "ble",
-  colza = "colza",
-  houblon = "houblon",
-  mais = "mais",
-  orge = "orge"
+  ble = "Blé",
+  colza = "Colza",
+  houblon = "Houblon",
+  mais = "Maïs",
+  orge = "Orge"
 }

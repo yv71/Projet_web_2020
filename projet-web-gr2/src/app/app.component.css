@@ -1,0 +1,25 @@
+app-cellules-container
+{
+  margin-top : 25vh;
+  position:fixed;
+}
+
+app-tremies-container
+{
+  margin-left : 25vw;
+  margin-top : 10vh;
+  position : fixed;
+}
+
+app-boisseaux-container
+{
+  margin-left: 25vw;
+  margin-top: 45vh;
+  position : fixed;
+}
+
+app-menu-structure
+{
+  position: fixed;
+  bottom : 1vh;
+}

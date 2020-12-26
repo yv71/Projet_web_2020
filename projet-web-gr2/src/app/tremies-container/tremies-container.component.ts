@@ -42,7 +42,7 @@ export class TremiesContainerComponent implements OnInit {
       if(vide){
         let nb = this.getRandomInt(10000) +1;
         ///Basiquement 20% de chance d'avoir une arrivée (getRandomInt renvoie un nombre entre 0 et 9999, s'il est supérieur à 8000 on déclenche une arrivée)
-        if(nb >= 8000){
+        if(nb >= 6000){
           this.arriveeGrains();
         }
       }
