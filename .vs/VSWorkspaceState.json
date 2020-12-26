@@ -3,13 +3,10 @@
     "",
     "\\projet-web-gr2",
     "\\projet-web-gr2\\e2e",
+    "\\projet-web-gr2\\e2e\\src",
     "\\projet-web-gr2\\src",
-    "\\projet-web-gr2\\src\\app",
-    "\\projet-web-gr2\\src\\app\\boisseaux-container",
-    "\\projet-web-gr2\\src\\app\\camions-container",
-    "\\projet-web-gr2\\src\\app\\cellules-container",
-    "\\projet-web-gr2\\src\\app\\tremies-container"
+    "\\projet-web-gr2\\src\\app"
   ],
-  "SelectedNode": "\\projet-web-gr2\\karma.conf.js",
+  "SelectedNode": "\\projet-web-gr2\\src\\app\\app.component.ts",
   "PreviewInSolutionExplorer": false
 }

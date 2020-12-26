@@ -1,9 +1,13 @@
 // Test silo
 // spec.js
-describe('Protractor Demo App', function () {
-    it('should have a title', function () {
-        browser.get('http://juliemr.github.io/protractor-demo/');
-
-        expect(browser.getTitle()).toEqual('Super Calculator');
+describe('Welcome page', function () {
+    it('has a correct title', function () {
+        browser.get('http://localhost:4200');
+        expect(browser.getTitle()).toEqual('projet-web-gr2');
     });
 });
+
+
+/* browser.get("http://locahost:4200"); */
+
+
