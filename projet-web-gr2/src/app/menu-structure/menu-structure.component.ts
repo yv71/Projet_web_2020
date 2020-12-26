@@ -30,6 +30,7 @@ export class MenuStructureComponent implements OnInit {
   {
     if(this.structure.getPleine()){
       let lot = this.structure.getLot();
+      let tailleInsuffisante = true;
       switch(this.structure.getType()){
         case (EnumTypeStructure.tremie) : {
           let cellSend : Structure = null;
@@ -38,6 +39,7 @@ export class MenuStructureComponent implements OnInit {
               if(!cellule.getPleine() && cellule.getVolume() >= lot.getPoids())
               {
                 cellSend = cellule;
+                tailleInsuffisante = false;
               }
             });
           });
@@ -47,7 +49,14 @@ export class MenuStructureComponent implements OnInit {
             alert("Lot n°" + lot.getId().toString() + " transféré dans la cellule n°" + cellSend.getId().toString());
           }
           else{
+            if(tailleInsuffisante)
+            {
+              alert("Aucune cellule de taille suffisante pour ce lot n'est disponible !");
+            }
+            else
+            {
             alert("Aucune cellule disponible pour accueillir ce lot !");
+            }
           }
           break;
         }
@@ -55,7 +64,7 @@ export class MenuStructureComponent implements OnInit {
           let boisseauSend : Structure = null;
           this.selectStructureService.getBoisseaux().forEach(function(boisseaux){
             boisseaux.forEach(function(boisseau){
-              if(!boisseau.getPleine() && boisseau.getVolume() >= lot.getPoids()){
+              if(!boisseau.getPleine()){
                 boisseauSend = boisseau;
               }
             });
@@ -71,7 +80,7 @@ export class MenuStructureComponent implements OnInit {
           break;
         }
         case(EnumTypeStructure.boisseau) : {
-          /// TRAITER ICI L ENVOIE VERS CLIENT ///
+          /// TRAITER ICI L ENVOI VERS CLIENT ///
         }
       }
 

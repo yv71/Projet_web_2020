@@ -11,7 +11,7 @@ export class EtatStructureDirective {
   {
     switch (this.etat) {
       case "vide":
-          this.bgColor = "#FFFFF";
+          this.bgColor = "white";
         break;
       case "pleine":
           this.bgColor = "green"

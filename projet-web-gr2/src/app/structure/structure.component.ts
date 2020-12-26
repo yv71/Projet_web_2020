@@ -19,6 +19,10 @@ export class StructureComponent implements OnInit {
     {
       this.statut = "pleine";
     }
+    else
+    {
+      this.statut = "vide";
+    }
   }
 
   ngOnInit(): void {
@@ -26,6 +30,14 @@ export class StructureComponent implements OnInit {
 
   getStatut() : string
   {
+    if(this.structure.getPleine())
+    {
+      this.statut = "pleine";
+    }
+    else
+    {
+      this.statut = "vide";
+    }
     return this.statut;
   }
 
@@ -38,6 +50,5 @@ export class StructureComponent implements OnInit {
   {
     return this.structure;
   }
-
 
 }
