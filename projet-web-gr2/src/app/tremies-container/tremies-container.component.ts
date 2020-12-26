@@ -29,6 +29,7 @@ export class TremiesContainerComponent implements OnInit {
       let tremie = this.tremiesModel[i];
         this.tremies.push(new StructureComponent(tremie,true));
     }
+
     setInterval( () => {
       let vide = false;
       this.tremiesModel.forEach(function(tremie){
@@ -42,7 +43,7 @@ export class TremiesContainerComponent implements OnInit {
           this.arriveeGrains();
         }
       }
-    },1000)
+    },10000)
   }
 
   arriveeGrains() : void
@@ -59,7 +60,6 @@ export class TremiesContainerComponent implements OnInit {
     aRemplir.setLot(lot);
     let msg = "Arrivée du lot de grain n°" + lot.getId().toString() + " de " + lot.getType() + ' et de ' + lot.getPoids().toString() + ' kg dans la trémie n°'  + aRemplir.getId().toString() + ' !';
     alert(msg);
-    console.log(aRemplir);
   }
 
   genRandomLot() : LotGrains
@@ -70,7 +70,6 @@ export class TremiesContainerComponent implements OnInit {
     let nb_enum = this.getRandomInt(5);
     for(let i = 0; i < 10; i++){
       nb_enum = this.getRandomInt(5);
-      console.log(nb_enum);
     }
     let type : EnumTypeGrains;
     switch(nb_enum){
