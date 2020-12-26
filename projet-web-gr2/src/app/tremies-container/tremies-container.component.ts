@@ -30,19 +30,23 @@ export class TremiesContainerComponent implements OnInit {
         this.tremies.push(new StructureComponent(tremie,true));
     }
 
+///Permet de gérer les arrivées aléatoires
     setInterval( () => {
       let vide = false;
+      //Si au moins une trémie est vide on peut test le déclenchement d'arrivée
       this.tremiesModel.forEach(function(tremie){
         if(!tremie.getPleine()) {
           vide = true;
         }
       });
       if(vide){
-        let nb = this.getRandomInt(10000);
-        if(nb > 0){
+        let nb = this.getRandomInt(10000) +1;
+        ///Basiquement 20% de chance d'avoir une arrivée (getRandomInt renvoie un nombre entre 0 et 9999, s'il est supérieur à 8000 on déclenche une arrivée)
+        if(nb >= 8000){
           this.arriveeGrains();
         }
       }
+      ///Temps en millisecondes, 10 000 = test toutes les 10 sec
     },10000)
   }
 
