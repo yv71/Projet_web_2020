@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Camion } from '../../camions-container/camion.model'
+import { Camion } from '../models/camion.model'
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
