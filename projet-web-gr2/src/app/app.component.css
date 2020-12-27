@@ -31,9 +31,4 @@ app-camions-container
   position : fixed;
 }
 
-app-menu-camion
-{
-  margin-left: 57vw;
-  margin-top: 45vh;
-  position : fixed;
-}
+

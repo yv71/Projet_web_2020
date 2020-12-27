@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Camion } from './camion.model';
+import { Camion } from '../shared/models/camion.model';
 import { SelectCamionService} from '../shared/services/select-camion.service';
 
 @Component({

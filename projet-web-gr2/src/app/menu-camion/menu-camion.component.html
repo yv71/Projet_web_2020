@@ -2,6 +2,15 @@
   <div class="infosGenerales">
     <h4> Camion n° {{getCamion().getNumCamion()}} </h4>
     <h5> {{getCamion().getLocalisation()}}</h5>
+    <div *ngIf="getCamion().getLot()!=null">
+      <h5 >Rempli de {{getCamion().getLot().getType()}}</h5>
+      <ul *ngIf="getCamion().getLocalisation()=='Au silo'">
+        <li *ngFor="let commande of getCommandes();">
+          <span>Client : {{commande.getClient().getNom()}}</span>
+          <button type="button" name="button" (click)='envoieClient(commande)'>Envoyer</button>
+        </li>
+      </ul>
+  </div>
   </div>
 
 </div>
