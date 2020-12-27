@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Structure } from '../shared/models/structure.model';
 import { EnumTypeStructure } from '../shared/models/enumTypeStructure.model';
 import {SelectStructureService } from '../shared/services/select-structure.service';
+import { Camion } from '../shared/models/camion.model';
+import { SelectCamionService} from '../shared/services/select-camion.service';
 
 @Component({
   selector: 'app-menu-structure',
@@ -12,7 +14,7 @@ export class MenuStructureComponent implements OnInit {
 
   private structure : Structure;
 
-  constructor(private selectStructureService : SelectStructureService) { }
+  constructor(private selectStructureService : SelectStructureService, private selectCamionService : SelectCamionService) { }
 
   ngOnInit(): void {
     this.selectStructureService.getStructure().subscribe((struct : Structure) =>
@@ -80,7 +82,23 @@ export class MenuStructureComponent implements OnInit {
           break;
         }
         case(EnumTypeStructure.boisseau) : {
-          /// TRAITER ICI L ENVOI VERS CLIENT ///
+          let camionSend : Camion = null;
+          this.selectCamionService.getCamions().forEach(function(camions){
+            camions.forEach(function(camion){
+              if(!camion.getPlein()){
+                camionSend = camion;
+              }
+            });
+          });
+          if(camionSend !=  null){
+            camionSend.setLot(lot);
+            this.structure.removeLot();
+            alert("Lot n°"+ lot.getId().toString() + " transféré dans le camion n°" + camionSend.getNumCamion().toString());
+          }
+          else{
+            alert("Aucun camion disponible pour accueillir ce lot !");
+          }
+          break;
         }
       }
 

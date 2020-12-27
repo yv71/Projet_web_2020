@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Client } from '../shared/models/client.model';
 import { Commande } from '../shared/models/commande.model';
 import { EnumTypeGrains } from '../shared/models/enumTypeGrains.model';
 import { LotGrains } from '../shared/models/lotGrains.model';
@@ -24,7 +25,7 @@ export class CommandesContainerComponent implements OnInit {
   addCommande(){
     let idCommande = 0
     setInterval(() => {
-      this.commandes.push(new Commande(idCommande, null, this.genRandomDemande()))
+      this.commandes.push(new Commande(idCommande, new Client(0,"Robert","Dijon"), this.genRandomDemande()))
       idCommande++;
     }, 10000);
   }

@@ -1,5 +1,6 @@
-import { LotGrains } from '../shared/models/lotGrains.model';
-import { Client } from '../shared/models/client.model';
+import { LotGrains } from './lotGrains.model';
+import { Client } from './client.model';
+import { collectExternalReferences } from '@angular/compiler';
 
 export class Camion {
 
@@ -64,18 +65,22 @@ export class Camion {
     }
   }
 
+  /*
   depotLot()
   {
     this.plein = false;
     this.lot = null;
-    this.destination = "Au silo"
-  }
+    this.destination = "Au silo";
+  }*/
 
   deplacer(){
-    this.arrive=false
+    this.arrive=true;
+    this.localisation=this.destination
     setTimeout(() => {
-        this.arrive=true
-        this.localisation=this.destination
-    }, 30000);
+        this.arrive=false;
+        this.localisation = "Au silo";
+        this.lot = null;
+        this.plein = false;
+    }, 5000);
   }
 }
