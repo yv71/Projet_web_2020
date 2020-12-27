@@ -15,6 +15,9 @@ import { BoisseauxContainerComponent } from './boisseaux-container/boisseaux-con
 import { CamionsContainerComponent } from './camions-container/camions-container.component';
 import { CommandesContainerComponent } from './commandes-container/commandes-container.component';
 import { HeaderComponent } from './header/header.component';
+import { MenuCamionComponent } from './menu-camion/menu-camion.component';
+import { EtatCamionDirective } from './shared/directives/etat-camion.directive';
+import {SelectCamionService } from './shared/services/select-camion.service';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,15 @@ import { HeaderComponent } from './header/header.component';
     BoisseauxContainerComponent,
     CamionsContainerComponent,
     CommandesContainerComponent,
-    HeaderComponent
+    HeaderComponent,
+    MenuCamionComponent,
+    EtatCamionDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [SelectStructureService],
+  providers: [SelectStructureService, SelectCamionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

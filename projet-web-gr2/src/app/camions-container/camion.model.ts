@@ -10,7 +10,7 @@ export class Camion {
   private localisation : string;
   private arrive : boolean;
 
-  contructor (numCamion: number)
+  constructor (numCamion: number)
   {
     this.numCamion=numCamion;
     this.plein=false;
@@ -42,7 +42,7 @@ export class Camion {
 
   getLocalisation() : string
   {
-    return this.localisation();
+    return this.localisation;
   }
 
   getArrive() : boolean
@@ -60,13 +60,13 @@ export class Camion {
     if(this.lot == null)
     {
       this.lot = lotGrains;
-      this.pleine = true;
+      this.plein = true;
     }
   }
 
   depotLot()
   {
-    this.pleine = false;
+    this.plein = false;
     this.lot = null;
     this.destination = "Au silo"
   }
@@ -76,6 +76,6 @@ export class Camion {
     setTimeout(() => {
         this.arrive=true
         this.localisation=this.destination
-    }, 30000);()
+    }, 30000);
   }
 }

@@ -1,1 +1,5 @@
-<p>camions-container works!</p>
+<div class="camionContainer">
+  <div class="camion"  *ngFor="let camion of camions; let index = index" (click)='selectCamion(camion.getNumCamion())'>
+  </div>
+  <h3>Camions</h3>
+  </div>
