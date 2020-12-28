@@ -5,9 +5,9 @@
   border: 1px solid black;
   justify-content: center;
   cursor: pointer;
-  
   flex-wrap:inherit;
   width:10vw;
+  margin:0 10px;
 }
 
 h3
