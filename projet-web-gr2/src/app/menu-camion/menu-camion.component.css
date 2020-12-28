@@ -1,0 +1,8 @@
+.menu{
+    margin-left: 40vw;
+    margin-top: 65vh;
+    justify-content: center;
+    width: 10vw;
+    position : fixed;
+    border: 1px solid black;
+  }

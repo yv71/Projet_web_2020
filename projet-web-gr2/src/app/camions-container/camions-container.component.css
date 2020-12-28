@@ -1,10 +1,11 @@
 .camion{
+  display:inline-block;
   height: 80px;
   width:100%;
   border: 1px solid black;
   justify-content: center;
   cursor: pointer;
-  display:flex;
+  
   flex-wrap:inherit;
   width:10vw;
 }
