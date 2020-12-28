@@ -27,7 +27,7 @@ export class CommandesContainerComponent implements OnInit {
     setInterval(() => {
       this.commandes.push(new Commande(idCommande, new Client(0,"Robert","Dijon"), this.genRandomDemande()))
       idCommande++;
-    }, 10000);
+    }, 60000);
   }
 
   genRandomDemande() : EnumTypeGrains
