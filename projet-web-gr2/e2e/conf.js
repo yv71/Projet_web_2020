@@ -6,4 +6,5 @@ exports.config = {
   onPrepare: async () => {
    await browser.waitForAngularEnabled(false);
  }
+
 }
