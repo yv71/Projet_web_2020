@@ -1,6 +1,6 @@
 <div class="menu" *ngIf="getStructure().getId() != -1">
   <div class="infosGenerales">
-    <h4> {{structure.getType()}} n° {{getStructure().getId()}} </h4>
+    <h4> <span class="type">{{structure.getType()}}</span> n° {{getStructure().getId()}} </h4>
     <p *ngIf="getStructure().getPleine()">Lot contenu : Lot n° {{structure.getLot().getId()}} - {{structure.getLot().getType()}} : {{structure.getLot().getPoids()}} kg</p>
     <p *ngIf="!getStructure().getPleine()">Pas de lot contenu</p>
     <p> Volume : {{getStructure().getVolume()}} m3</p>

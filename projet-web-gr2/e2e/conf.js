@@ -5,5 +5,5 @@ exports.config = {
   specs: ['./src/test.js'],
   onPrepare: async () => {
    await browser.waitForAngularEnabled(false);
-  }
+ }
 }
