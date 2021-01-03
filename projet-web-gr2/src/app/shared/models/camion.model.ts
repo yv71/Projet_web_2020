@@ -65,14 +65,6 @@ export class Camion {
     }
   }
 
-  /*
-  depotLot()
-  {
-    this.plein = false;
-    this.lot = null;
-    this.destination = "Au silo";
-  }*/
-
   deplacer(){
     this.arrive=true;
     this.localisation=this.destination
@@ -81,6 +73,6 @@ export class Camion {
         this.localisation = "Au silo";
         this.lot = null;
         this.plein = false;
-    }, 5000);
+    }, 20000);
   }
 }
