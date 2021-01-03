@@ -9,7 +9,6 @@ export class Camion {
   private lot : LotGrains;
   private destination : string;
   private localisation : string;
-  private arrive : boolean;
 
   constructor (numCamion: number)
   {
@@ -18,7 +17,6 @@ export class Camion {
     this.lot=null;
     this.destination=null;
     this.localisation="Au silo";
-    this.arrive=true;
   }
 
   getNumCamion() : number
@@ -46,11 +44,6 @@ export class Camion {
     return this.localisation;
   }
 
-  getArrive() : boolean
-  {
-    return this.arrive;
-  }
-
   getLot() : LotGrains
   {
     return this.lot;
@@ -66,10 +59,8 @@ export class Camion {
   }
 
   deplacer(){
-    this.arrive=true;
     this.localisation=this.destination
     setTimeout(() => {
-        this.arrive=false;
         this.localisation = "Au silo";
         this.lot = null;
         this.plein = false;
